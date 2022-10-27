@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon ./src/index.js -e=DEV -p=8080 -m=FORK",
-    "start": "node ./src/index.js -e=PROD -p=3000 -m=CLUSTER",
+    "start": "node ./src/index.js -e=PROD -m=FORK",
+    "start-old": "node ./src/index.js -e=PROD -p=3000 -m=CLUSTER",
     "transpile": "babel src --out-dir dist",
     "babel-node": "babel-node --presets=@babel/preset-env",
     "test": "echo \"Error: no test specified\" && exit 1",
